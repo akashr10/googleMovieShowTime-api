@@ -4,7 +4,7 @@ var json;
 
 function getShowtimes(cityName,foo)
 {
-$.get("movieData.php?city="+cityName,function(data){testelement=data;
+$.get("https://rawgit.com/widespreadakash/googleMovieShowTime-api/master/movieData.php?city="+cityName,function(data){testelement=data;
 
 json='{"results" : [{'
 var noOfTheaters=$(testelement).find('.theater').length;
@@ -61,7 +61,7 @@ foo(json);
 function getMoviePoster(moviename, posterURL)
 {
   $.ajax({
-    url:"moviePoster.php",
+    url:"https://rawgit.com/widespreadakash/googleMovieShowTime-api/master/moviePoster.php",
     data:{"moviename":moviename},
     type:"GET",
     success: function(data){posterURL(data)}
